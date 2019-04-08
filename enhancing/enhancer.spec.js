@@ -18,14 +18,14 @@ it("increase enhancement by 1", () => {
     durability: 100
   });
 });
-// test("decrease durability by 5 if enhancement is less than 15", () => {
-//   expect(
-//     enhancer.fail({
-//       enhancement: 14,
-//       durability: 100
-//     })
-//   ).toEqual({
-//     enhancement: 14,
-//     durability: 95
-//   });
-// });
+test("decrease durability by 5 if enhancement is less than 15", () => {
+  expect(
+    enhancer.fail({
+      enhancement: 14,
+      durability: 100
+    })
+  ).toEqual({
+    enhancement: 14,
+    durability: 95
+  });
+});

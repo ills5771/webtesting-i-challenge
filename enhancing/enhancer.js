@@ -13,21 +13,14 @@ function succeed(item) {
   };
   return newItem;
 }
-
-// function fail(item) {
-//   let { enhancement, durability } = item;
-//   if (enhancement < 15) {
-//     durability - 5;
-//   }
-
-//   return { ...item };
-
-// if (enhancement > 15) {
-//   durability - 10;
-// }
-// if (enhancement > 16) {
-//   enhancement - 1;
-// }
+function fail(item) {
+  let newItem = {
+    name: item.name,
+    enhancement: item.enhancement,
+    durability: item.durability - 5
+  };
+  return newItem;
+}
 
 function repair(item) {
   let newItem = {
