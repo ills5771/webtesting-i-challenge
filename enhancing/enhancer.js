@@ -35,5 +35,11 @@ function repair(item) {
 }
 
 function get(item) {
-  return { ...item };
+  let newItem = {
+    name:
+      item.enhancement === 0 ? item.name : `[+${item.enhancement}]` + item.name,
+    enhancement: item.enhancement,
+    durability: item.durability
+  };
+  return newItem;
 }

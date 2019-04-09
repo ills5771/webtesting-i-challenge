@@ -52,3 +52,25 @@ test("decrease enhancement by 1 if enhancement is greater than 16, durability de
     durability: 90
   });
 });
+it("display name only if enhancement = 0", () => {
+  expect(
+    enhancer.get({
+      name: "Lazer Lance",
+      enhancement: 0
+    })
+  ).toEqual({
+    name: "Lazer Lance",
+    enhancement: 0
+  });
+});
+it("display name and enhancement if enhancement is greater than 0", () => {
+  expect(
+    enhancer.get({
+      name: "Lazer Lance",
+      enhancement: 15
+    })
+  ).toEqual({
+    name: "[+15]Lazer Lance",
+    enhancement: 15
+  });
+});
