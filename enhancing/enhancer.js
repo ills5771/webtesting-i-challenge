@@ -17,8 +17,10 @@ function succeed(item) {
 function fail(item) {
   let newItem = {
     name: item.name,
-    enhancement: item.enhancement,
-    durability: item.durability - 5
+    enhancement:
+      item.enhancement > 16 ? item.enhancement - 1 : item.enhancement,
+    durability:
+      item.enhancement < 15 ? item.durability - 5 : item.durability - 10
   };
   return newItem;
 }
