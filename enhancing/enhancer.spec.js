@@ -10,11 +10,11 @@ test("repairs item to 100 durability", () => {
 it("increase enhancement by 1", () => {
   expect(
     enhancer.succeed({
-      enhancement: 10,
+      enhancement: 9,
       durability: 100
     })
   ).toEqual({
-    enhancement: 11,
+    enhancement: 10,
     durability: 100
   });
 });

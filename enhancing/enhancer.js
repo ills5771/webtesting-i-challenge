@@ -8,7 +8,8 @@ module.exports = {
 function succeed(item) {
   let newItem = {
     name: item.name,
-    enhancement: item.enhancement + 1,
+    enhancement:
+      item.enhancement === 20 ? item.enhancement : item.enhancement + 1,
     durability: item.durability
   };
   return newItem;
