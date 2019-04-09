@@ -41,7 +41,7 @@ test("decrease durability by 10 if enhancement greater than 15", () => {
   });
 });
 
-test("decrease enhancement by 1 if enhancement is greater than 16", () => {
+test("decrease enhancement by 1 if enhancement is greater than 16, durability decreased by 10 since enhancement is greater than 15", () => {
   expect(
     enhancer.fail({
       enhancement: 18,
